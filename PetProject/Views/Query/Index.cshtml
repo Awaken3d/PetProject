@@ -1,0 +1,23 @@
+﻿@model dynamic
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+
+@{ 
+     var myChart = new Chart(width: 600, height: 400)
+         .AddTitle("Total Plays")
+         .AddSeries("Default",
+             xValue: Model.songName, xField: "Song Name",
+             yValues: Model.playsCount, yFields: "Number of Plays")
+         .Write();
+
+    
+
+
+
+
+}
+
