@@ -1,4 +1,12 @@
-﻿@model dynamic
+﻿
+
+@using PetProject.Models;
+@using System.Collections.Generic;
+@using System.Data;
+@using System.Linq;
+@using System.Web;
+@model IList<result>
+
 @{
     ViewBag.Title = "Index";
 }
@@ -7,14 +15,16 @@
 
 
 @{ 
-     var myChart = new Chart(width: 600, height: 400)
-         .AddTitle("Total Plays")
-         .AddSeries("Default",
-             xValue: Model.songName, xField: "Song Name",
-             yValues: Model.playsCount, yFields: "Number of Plays")
-         .Write();
+   // foreach (var i in Model)
+    //{
+        var myChart = new Chart(width: 600, height: 400)
+            .AddTitle("Total Plays")
+            .AddSeries("Default",
+                xValue: Model.Select(p=>p.songName).ToArray(), xField: "Song Name",
+                yValues: Model.Select(p=>p.playsCount).ToArray(), yFields: "Number of Plays")
+            .Write();
 
-    
+  //  }
 
 
 
