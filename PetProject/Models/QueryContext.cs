@@ -33,7 +33,11 @@ namespace PetProject.Models
                     select p).Count();
         }
 
-      
+
+        public int getSongId(string songName) {
+            int id =  Songs.Where(p => p.Title == songName).Select(p => p.Id).FirstOrDefault();
+            return id;
+        }
             public dynamic GetTopSongs(DateTime? earliest, DateTime? latest, int limit)
         {
 
@@ -112,9 +116,9 @@ namespace PetProject.Models
 
 
 
-        public dynamic GetAverageHistory(int songId) {
+        public List<resultAverage> GetAverageHistory(int songId) {
 
-            var res = Ratings.Where(p => p.song.Id == songId).GroupBy(g => DbFunctions.TruncateTime(g.CreatedAt)).Select(g => new { date = g.Key, average = g.Select(p => p.RatingValue).Average() }).ToList();
+            List<resultAverage> res = Ratings.Where(p => p.song.Id == songId).GroupBy(g => DbFunctions.TruncateTime(g.CreatedAt)).Select(g => new resultAverage { date = g.Key, average = g.Select(p => p.RatingValue).Average() }).ToList();
 
             return res;
         }
@@ -157,6 +161,18 @@ namespace PetProject.Models
 
         public string songName { get; set; }
         public decimal playsCount { get; set; }
+
+    }
+
+    public class resultAverage
+    {
+        /*  public result(string songName, decimal playsCount) {
+              this.songName = songName;
+              this.playsCount = playsCount;
+          }*/
+
+        public DateTime? date { get; set; }
+        public decimal average { get; set; }
 
     }
 }

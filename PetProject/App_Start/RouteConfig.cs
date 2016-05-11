@@ -18,6 +18,12 @@ namespace PetProject
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
             );
+
+            routes.MapRoute(
+               name: "Trends",
+               url: "{controller}/{action}/SongName/{songName}",
+               defaults: new { controller = "Trends", action = "Index", songName= "Songa" }
+           );
         }
     }
 }

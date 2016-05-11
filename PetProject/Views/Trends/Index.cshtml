@@ -1,0 +1,22 @@
+﻿@using PetProject.Models;
+@model List<resultAverage>
+
+
+
+<div>
+    @{
+
+        var myChart = new Chart(width: 600, height: 400)
+           .AddTitle("Total Plays")
+           .AddSeries("Default",
+               xValue: Model.Select(p => p.date).ToArray(), xField: "Date",
+               yValues: Model.Select(p => p.average).ToArray(), yFields: "Average Rating")
+           .Write();
+
+
+    }
+
+</div>
+<div>
+<a href="../Query/Index">back</a>
+</div>

@@ -199,7 +199,8 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\QueryController.cs" />
-    <Compile Include="Controllers\RatingController.cs" />
+    <Compile Include="Controllers\RatingsController.cs" />
+    <Compile Include="Controllers\TrendsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -327,6 +328,7 @@
     <Content Include="Views\Songs1\Edit.cshtml" />
     <Content Include="Views\Songs1\Index.cshtml" />
     <Content Include="Views\Query\Index.cshtml" />
+    <Content Include="Views\Trends\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

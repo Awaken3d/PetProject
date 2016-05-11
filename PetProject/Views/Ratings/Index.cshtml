@@ -1,13 +1,27 @@
 ﻿@using PetProject.Models;
-@using System.Collections.Generic;
+@using System.Collections;
+
 @using System.Data;
 @using System.Linq;
 @using System.Web;
 @model IList<result>
 
+
 @{
     ViewBag.Title = "Index";
 }
+
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.3.min.js">
+
+
+    $("div a").click(function () {
+        $("#chart").html("Trends/Index/SongName/" + $(this).text());
+
+    });
+</script>
+
+
 
 <h2>Index</h2>
 <!--
@@ -38,4 +52,7 @@
 
 
 </div>
+
+<div name="chart"></div>
+
 

@@ -9,23 +9,36 @@
     ViewBag.Title = "Index";
 }
 
+
+
+
 <h2>Index</h2>
 
 
+
 @{ 
-   // foreach (var i in Model)
+    // foreach (var i in Model)
     //{
-        var myChart = new Chart(width: 600, height: 400)
-            .AddTitle("Total Plays")
-            .AddSeries("Default",
-                xValue: Model.Select(p=>p.songName).ToArray(), xField: "Song Name",
-                yValues: Model.Select(p=>p.playsCount).ToArray(), yFields: "Number of Plays")
-            .Write();
+   /* var myChart = new Chart(width: 600, height: 400)
+        .AddTitle("Total Plays")
+        .AddSeries("Default",
+            xValue: Model.Select(p=>p.songName).ToArray(), xField: "Song Name",
+            yValues: Model.Select(p=>p.playsCount).ToArray(), yFields: "Number of Plays")
+        .Write();*/
 
-  //  }
-
-
+    //  }
 
 
+
+    
 }
+
+@foreach (var j in Model.AsEnumerable()) {
+   <a href="../Trends/Index/SongName/@j.songName"> @j.songName </a><br />;
+}
+
+
+
+<div name="chart"></div>
+
 

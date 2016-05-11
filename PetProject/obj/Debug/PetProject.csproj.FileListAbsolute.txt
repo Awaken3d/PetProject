@@ -83,3 +83,4 @@ C:\Users\Nicholas\Documents\Visual Studio 2015\Projects\PetProject\PetProject\ob
 C:\Users\Nicholas\Documents\Visual Studio 2015\Projects\PetProject\PetProject\obj\Debug\PetProject.csproj.GenerateResource.Cache
 C:\Users\Nicholas\Documents\Visual Studio 2015\Projects\PetProject\PetProject\obj\Debug\PetProject.Migrations.test.resources
 C:\Users\Nicholas\Documents\Visual Studio 2015\Projects\PetProject\PetProject\obj\Debug\PetProject.Migrations.pranav.resources
+C:\Users\Nicholas\Documents\Visual Studio 2015\Projects\PetProject\PetProject\obj\Debug\PetProject.csprojResolveAssemblyReference.cache

@@ -7,16 +7,20 @@ using System.Web.Mvc;
 
 namespace PetProject.Controllers
 {
-    public class RatingController : Controller
+    public class TrendsController : Controller
     {
-        // GET: Rating
-        public ActionResult Index()
+        // GET: Trends
+        public ActionResult Index(string songName)
         {
             using (var res = new QueryContext())
             {
-                IList<result> mod = res.GetTopSongs1(DateTime.Now, DateTime.Now.AddMonths(7), 10);
+                int id = res.getSongId(songName);
+                List<resultAverage> mod = res.GetAverageHistory(id);
+
                 return View(mod);
+
             }
+              
         }
     }
 }
