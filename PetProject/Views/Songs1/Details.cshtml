@@ -68,6 +68,11 @@
 
     </dl>
 </div>
+
+<audio controls="controls">
+    <source src="~/mp3/@Model.AudioFile" type="audio/mpeg" />
+</audio>
+
 <p>
     @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
     @Html.ActionLink("Back to List", "Index")
