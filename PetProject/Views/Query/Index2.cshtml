@@ -28,7 +28,7 @@
     <source src="~/mp3/test1.mp3" type="audio/mpeg" />
 </audio>
 
-<form id="form1" method="post">
+<!--<form id="form1" method="post">
 
 
 
@@ -38,7 +38,7 @@
                     "Select Rating",
                     new { @class = "form-control" })*@
 
-    <select class="form-control" id="Song_Rating" name="Song Rating">
+   <!-- <select class="form-control" id="Song_Rating" name="Song Rating">
         <option value="">Select Rating</option>
         <option value="1">1.0</option>
         <option value="2">2.0</option>
@@ -50,8 +50,12 @@
 
     <input type="submit" name="submit" value="Submit" />
     </form>
-
-
+       -->
+<form id="form1" method="post" >
+    <input type="text" name="reportName" />
+    <input type="submit" name="submit" value="Search" />
+</form>
+       
 
     @{
 // foreach (var i in Model)
